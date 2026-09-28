@@ -135,7 +135,7 @@ const gallery = [
     caption:
       "Sinalização acessível: símbolos que representam a diversidade de pessoas e o direito de todas à acessibilidade.",
     className: "",
-i   imgPosition: "object-top",
+    imgPosition: "object-top",
   },
   {
     image: materiaisColeta.url,
