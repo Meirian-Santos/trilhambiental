@@ -19,6 +19,9 @@ import lixeirasColeta from "@/assets/trilha/lixeiras-coleta.webp.asset.json";
 import pinturaUrucum from "@/assets/trilha/pintura-urucum.webp.asset.json";
 import sementesETinta from "@/assets/trilha/sementes-e-tinta.webp.asset.json";
 import urucumNaArvore from "@/assets/trilha/urucum-na-arvore.webp.asset.json";
+import fichaInvestigativa from "@/assets/trilha/ficha-investigativa.jpg.asset.json";
+import simbolosAcessibilidade from "@/assets/trilha/simbolos-acessibilidade.jpg.asset.json";
+import materiaisColeta from "@/assets/trilha/materiais-coleta.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -117,6 +120,30 @@ const gallery = [
     alt: "Cartaz Urucum, Bixa orellana, nosso símbolo",
     caption: "Bixa orellana: um símbolo escolhido pela turma.",
     className: "",
+  },
+  {
+    image: fichaInvestigativa.url,
+    alt: "Ficha investigativa de campo sobre observação ambiental e acessibilidade",
+    caption:
+      "Ficha investigativa de campo preenchida durante a trilha pelos espaços abertos e verdes da escola, registrando as observações sobre acessibilidade e ambiente.",
+    className: "",
+    imgPosition: "object-top",
+  },
+  {
+    image: simbolosAcessibilidade.url,
+    alt: "Símbolos de sinalização acessível para diferentes pessoas",
+    caption:
+      "Sinalização acessível: símbolos que representam a diversidade de pessoas e o direito de todas à acessibilidade.",
+    className: "",
+i   imgPosition: "object-top",
+  },
+  {
+    image: materiaisColeta.url,
+    alt: "Materiais educativos sobre a importância da coleta seletiva",
+    caption:
+      "Materiais produzidos pela turma sobre a importância da coleta seletiva e a separação correta dos resíduos.",
+    className: "md:col-span-2",
+    imgPosition: "object-top",
   },
 ];
 
