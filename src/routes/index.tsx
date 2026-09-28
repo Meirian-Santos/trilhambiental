@@ -84,7 +84,13 @@ const themes = [
   },
 ];
 
-const gallery = [
+const gallery: {
+  image: string;
+  alt: string;
+  caption: string;
+  className: string;
+  imgPosition?: string;
+}[] = [
   {
     image: urucumNaArvore.url,
     alt: "Frutos de urucum entre as folhas da árvore",
@@ -273,9 +279,13 @@ function Index() {
           <div className="mt-12 grid auto-rows-[18rem] gap-4 md:grid-cols-4">
             {gallery.map((item) => (
               <figure key={item.image} className={`group relative overflow-hidden rounded-sm bg-primary ${item.className}`}>
-                <img src={item.image} alt={item.alt} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className={`h-full w-full object-cover ${item.imgPosition ?? "object-center"} transition-transform duration-700 group-hover:scale-105`}
+                />
                 <div className="absolute inset-x-0 bottom-0 bg-caption px-5 pb-5 pt-16">
-                  <figcaption className="text-sm font-semibold leading-relaxed text-primary-foreground">{item.caption}</figcaption>
+                  <figcaption className="text-justify text-sm font-semibold leading-relaxed text-primary-foreground">{item.caption}</figcaption>
                 </div>
               </figure>
             ))}
@@ -297,6 +307,9 @@ function Index() {
           <div>
             <p className="font-display text-2xl font-semibold text-forest">Trilha da Diversidade Ambiental</p>
             <p className="mt-2 text-sm text-muted-foreground">E.E. Professor Luiz Gonzaga Costa • 7º ano A</p>
+            <p className="mt-4 max-w-md text-justify text-sm text-muted-foreground">
+              Projeto realizado com o apoio da coordenação pedagógica da escola.
+            </p>
           </div>
           <div className="md:text-right">
             <p className="text-sm font-bold text-foreground">Professora Meirian Barbosa dos Santos</p>
