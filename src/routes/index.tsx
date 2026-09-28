@@ -19,6 +19,9 @@ import lixeirasColeta from "@/assets/trilha/lixeiras-coleta.webp.asset.json";
 import pinturaUrucum from "@/assets/trilha/pintura-urucum.webp.asset.json";
 import sementesETinta from "@/assets/trilha/sementes-e-tinta.webp.asset.json";
 import urucumNaArvore from "@/assets/trilha/urucum-na-arvore.webp.asset.json";
+import fichaInvestigativa from "@/assets/trilha/ficha-investigativa.jpg.asset.json";
+import simbolosAcessibilidade from "@/assets/trilha/simbolos-acessibilidade.jpg.asset.json";
+import materiaisColeta from "@/assets/trilha/materiais-coleta.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -81,7 +84,13 @@ const themes = [
   },
 ];
 
-const gallery = [
+const gallery: {
+  image: string;
+  alt: string;
+  caption: string;
+  className: string;
+  imgPosition?: string;
+}[] = [
   {
     image: urucumNaArvore.url,
     alt: "Frutos de urucum entre as folhas da árvore",
@@ -117,6 +126,30 @@ const gallery = [
     alt: "Cartaz Urucum, Bixa orellana, nosso símbolo",
     caption: "Bixa orellana: um símbolo escolhido pela turma.",
     className: "",
+  },
+  {
+    image: fichaInvestigativa.url,
+    alt: "Ficha investigativa de campo sobre observação ambiental e acessibilidade",
+    caption:
+      "Ficha investigativa de campo preenchida durante a trilha pelos espaços abertos e verdes da escola, registrando as observações sobre acessibilidade e ambiente.",
+    className: "",
+    imgPosition: "object-top",
+  },
+  {
+    image: simbolosAcessibilidade.url,
+    alt: "Símbolos de sinalização acessível para diferentes pessoas",
+    caption:
+      "Sinalização acessível: símbolos que representam a diversidade de pessoas e o direito de todas à acessibilidade.",
+    className: "",
+    imgPosition: "object-top",
+  },
+  {
+    image: materiaisColeta.url,
+    alt: "Materiais educativos sobre a importância da coleta seletiva",
+    caption:
+      "Materiais produzidos pela turma sobre a importância da coleta seletiva e a separação correta dos resíduos.",
+    className: "md:col-span-2",
+    imgPosition: "object-top",
   },
 ];
 
@@ -246,9 +279,13 @@ function Index() {
           <div className="mt-12 grid auto-rows-[18rem] gap-4 md:grid-cols-4">
             {gallery.map((item) => (
               <figure key={item.image} className={`group relative overflow-hidden rounded-sm bg-primary ${item.className}`}>
-                <img src={item.image} alt={item.alt} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className={`h-full w-full object-cover ${item.imgPosition ?? "object-center"} transition-transform duration-700 group-hover:scale-105`}
+                />
                 <div className="absolute inset-x-0 bottom-0 bg-caption px-5 pb-5 pt-16">
-                  <figcaption className="text-sm font-semibold leading-relaxed text-primary-foreground">{item.caption}</figcaption>
+                  <figcaption className="text-justify text-sm font-semibold leading-relaxed text-primary-foreground">{item.caption}</figcaption>
                 </div>
               </figure>
             ))}
@@ -270,6 +307,9 @@ function Index() {
           <div>
             <p className="font-display text-2xl font-semibold text-forest">Trilha da Diversidade Ambiental</p>
             <p className="mt-2 text-sm text-muted-foreground">E.E. Professor Luiz Gonzaga Costa • 7º ano A</p>
+            <p className="mt-4 max-w-md text-justify text-sm text-muted-foreground">
+              Projeto realizado com o apoio da coordenação pedagógica da escola.
+            </p>
           </div>
           <div className="md:text-right">
             <p className="text-sm font-bold text-foreground">Professora Meirian Barbosa dos Santos</p>
