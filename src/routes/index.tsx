@@ -22,6 +22,9 @@ import urucumNaArvore from "@/assets/trilha/urucum-na-arvore.webp.asset.json";
 import fichaInvestigativa from "@/assets/trilha/ficha-investigativa.jpg.asset.json";
 import simbolosAcessibilidade from "@/assets/trilha/simbolos-acessibilidade.jpg.asset.json";
 import materiaisColeta from "@/assets/trilha/materiais-coleta.jpg.asset.json";
+import grupoFinalTrilha from "@/assets/trilha/grupo-final-trilha.jpg.asset.json";
+import fichaCampoDistribuida from "@/assets/trilha/ficha-campo-distribuida.jpg.asset.json";
+import cartolinaBraille from "@/assets/trilha/cartolina-braille.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -149,6 +152,29 @@ const gallery: {
     caption:
       "Materiais produzidos pela turma sobre a importância da coleta seletiva e a separação correta dos resíduos.",
     className: "md:col-span-2",
+    imgPosition: "object-top",
+  },
+  {
+    image: grupoFinalTrilha.url,
+    alt: "Turma do 7º ano A reunida em frente à árvore de urucum ao final da trilha",
+    caption:
+      "A turma reunida ao final da trilha, em frente à árvore de urucum da escola, celebrando tudo o que foi observado e aprendido.",
+    className: "md:col-span-2",
+  },
+  {
+    image: fichaCampoDistribuida.url,
+    alt: "Ficha investigativa de campo distribuída para cada aluno preencher durante a trilha ambiental",
+    caption:
+      "Ficha investigativa de campo distribuída a cada aluno, para registrar com SIM ou NÃO as observações feitas durante a trilha ambiental.",
+    className: "",
+    imgPosition: "object-top",
+  },
+  {
+    image: cartolinaBraille.url,
+    alt: "Cartolina do grupo da acessibilidade com a transcrição em Braille de Urucum e Bixa orellana",
+    caption:
+      "Cartolina do grupo responsável por falar da importância da acessibilidade ambiental: a transcrição em Braille de Urucum e do nome científico Bixa orellana.",
+    className: "",
     imgPosition: "object-top",
   },
 ];
