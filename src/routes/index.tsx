@@ -154,6 +154,29 @@ const gallery: {
     className: "md:col-span-2",
     imgPosition: "object-top",
   },
+  {
+    image: grupoFinalTrilha.url,
+    alt: "Turma do 7º ano A reunida em frente à árvore de urucum ao final da trilha",
+    caption:
+      "A turma reunida ao final da trilha, em frente à árvore de urucum da escola, celebrando tudo o que foi observado e aprendido.",
+    className: "md:col-span-2",
+  },
+  {
+    image: fichaCampoDistribuida.url,
+    alt: "Ficha investigativa de campo distribuída para cada aluno preencher durante a trilha ambiental",
+    caption:
+      "Ficha investigativa de campo distribuída a cada aluno, para registrar com SIM ou NÃO as observações feitas durante a trilha ambiental.",
+    className: "",
+    imgPosition: "object-top",
+  },
+  {
+    image: cartolinaBraille.url,
+    alt: "Cartolina do grupo da acessibilidade com a transcrição em Braille de Urucum e Bixa orellana",
+    caption:
+      "Cartolina do grupo responsável por falar da importância da acessibilidade ambiental: a transcrição em Braille de Urucum e do nome científico Bixa orellana.",
+    className: "",
+    imgPosition: "object-top",
+  },
 ];
 
 function Index() {
