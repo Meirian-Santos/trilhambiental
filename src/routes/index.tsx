@@ -22,6 +22,9 @@ import urucumNaArvore from "@/assets/trilha/urucum-na-arvore.webp.asset.json";
 import fichaInvestigativa from "@/assets/trilha/ficha-investigativa.jpg.asset.json";
 import simbolosAcessibilidade from "@/assets/trilha/simbolos-acessibilidade.jpg.asset.json";
 import materiaisColeta from "@/assets/trilha/materiais-coleta.jpg.asset.json";
+import grupoFinalTrilha from "@/assets/trilha/grupo-final-trilha.jpg.asset.json";
+import fichaCampoDistribuida from "@/assets/trilha/ficha-campo-distribuida.jpg.asset.json";
+import cartolinaBraille from "@/assets/trilha/cartolina-braille.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
